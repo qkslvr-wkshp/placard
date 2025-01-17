@@ -9,14 +9,28 @@ export const routes: Routes = [
       import('./about/about.module').then((m) => m.AboutModule),
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    path: '',
+    loadChildren: () => import('./app.module').then((m) => m.AppModule),
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'join', loadChildren: () => import('./join/join.module').then(m => m.JoinModule) },
-  { path: 'book', loadChildren: () => import('./book/book.module').then(m => m.BookModule) },
-  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
-  { path: 'tools-and-resources', loadChildren: () => import('./tools-and-resources/tools-and-resources.module').then(m => m.ToolsAndResourcesModule) },
+  {
+    path: 'join',
+    loadChildren: () => import('./join/join.module').then((m) => m.JoinModule),
+  },
+  {
+    path: 'book',
+    loadChildren: () => import('./book/book.module').then((m) => m.BookModule),
+  },
+  {
+    path: 'blog',
+    loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
+  },
+  {
+    path: 'tools-and-resources',
+    loadChildren: () =>
+      import('./tools-and-resources/tools-and-resources.module').then(
+        (m) => m.ToolsAndResourcesModule,
+      ),
+  },
   { path: '**', component: PageNotFoundComponent },
 ];
 
