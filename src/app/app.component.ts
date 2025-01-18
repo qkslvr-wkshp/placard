@@ -11,10 +11,10 @@ export class AppComponent {
   title = 'Quicksilver Workshop Productions';
 
   sections = [
-    {title: 'Learn More', link: 'about'},
+    { title: 'About', link: 'about' },
     /*{title: 'Join a Table', link: 'join'},
     {title: 'Schedule Your Event', link: 'book'},
     {title: 'You See a Door', link: 'blog'},*/
-    {title: 'Tools and Resources', link: 'tools-and-resources'},
+    { title: 'Tools & Resources', link: 'tools-and-resources' },
   ];
 }
