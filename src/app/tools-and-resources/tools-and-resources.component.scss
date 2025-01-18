@@ -14,5 +14,19 @@ article {
 
   li {
     padding: 12px 0;
+
+    a {
+      color: var(--gray-700);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--gray-900);
+        font-weight: bold;
+      }
+    }
+
+    svg {
+      margin-left: 5px;
+    }
   }
 }

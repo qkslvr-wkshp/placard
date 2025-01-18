@@ -8,13 +8,10 @@ import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Quicksilver Workshop Productions';
+  title = 'Quicksilver Workshop';
 
   sections = [
     { title: 'About', link: 'about' },
-    /*{title: 'Join a Table', link: 'join'},
-    {title: 'Schedule Your Event', link: 'book'},
-    {title: 'You See a Door', link: 'blog'},*/
     { title: 'Tools & Resources', link: 'tools-and-resources' },
   ];
 }
