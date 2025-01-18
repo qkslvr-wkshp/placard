@@ -1,4 +1,14 @@
 h3 {
   color: var(--quicksilver);
-  margin-top: 2rem;
+}
+
+article {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  padding: 1px 13px 1px 20px;
+
+  p {
+    color: #666;
+  }
 }

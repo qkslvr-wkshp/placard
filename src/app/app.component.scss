@@ -12,59 +12,35 @@
   --gray-900: oklch(19.37% 0.006 300.98);
   --gray-700: oklch(36.98% 0.014 302.71);
   --gray-400: oklch(70.9% 0.015 304.04);
+  --gray-300: whitesmoke;
   --quicksilver: slategrey;
 
   --quicksilver-vertical-gradient: linear-gradient(
-      180deg,
-      var(--gray-900) 0%,
-      var(--gray-700) 25%,
-      var(--quicksilver) 50%,
-      var(--gray-400) 100%
+    180deg,
+    var(--gray-900) 0%,
+    var(--gray-700) 25%,
+    var(--quicksilver) 50%,
+    var(--gray-400) 100%
   );
 
   --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
+    180deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
   );
 
   --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
+    90deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
   );
 
   --pill-accent: var(--bright-blue);
 
-  font-family: "Inter",
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  Helvetica,
-  Arial,
-  sans-serif,
-  "Apple Color Emoji",
-  "Segoe UI Emoji",
-  "Segoe UI Symbol";
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  --inter-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-
-  h1 {
-    font-size: 3.125rem;
-    color: var(--quicksilver);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight",
+  font-family:
+    "Inter",
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -75,6 +51,33 @@
     "Apple Color Emoji",
     "Segoe UI Emoji",
     "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --inter-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--quicksilver);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family:
+      "Inter Tight",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol";
   }
 
   p {
@@ -136,8 +139,8 @@
   }
 
   .divider {
-    width: 3px;
-    background: var(--quicksilver-vertical-gradient);
+    width: 1px;
+    background: var(--gray-300);
     margin-inline: 0.5rem;
   }
 
@@ -194,7 +197,7 @@
   }
 
   .pill:hover:not(.active-link) {
-    background: color-mix(in srgb, var(--gray-900) 80%, transparent);
+    background: oklch(0.59 0.03 251.66);
 
     span {
       color: #fff;
@@ -228,10 +231,13 @@
   }
 
   footer {
+    background-color: white;
     bottom: -8px;
+    color: #666;
     font-size: smaller;
     height: 30px;
-    position: absolute;
+    padding-top: 8px;
+    position: fixed;
     text-align: center;
     width: 100%;
   }
