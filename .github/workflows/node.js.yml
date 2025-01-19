@@ -32,7 +32,7 @@ jobs:
     - run: npm ci
     # - run: npm test
     # - run: npm run build --omit=dev --base-href placard
-    - run: npm run build:prod
+    - run: npm run build --base-href placard
     env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
