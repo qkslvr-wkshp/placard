@@ -4,25 +4,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 export const routes: Routes = [
   {
-    path: 'about',
-    loadChildren: () =>
-      import('./about/about.module').then((m) => m.AboutModule),
-  },
-  {
     path: '',
     loadChildren: () => import('./app.module').then((m) => m.AppModule),
   },
   {
-    path: 'join',
-    loadChildren: () => import('./join/join.module').then((m) => m.JoinModule),
-  },
-  {
-    path: 'book',
-    loadChildren: () => import('./book/book.module').then((m) => m.BookModule),
-  },
-  {
-    path: 'blog',
-    loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
+    path: 'about',
+    loadChildren: () =>
+      import('./about/about.module').then((m) => m.AboutModule),
   },
   {
     path: 'tools-and-resources',
@@ -30,6 +18,11 @@ export const routes: Routes = [
       import('./tools-and-resources/tools-and-resources.module').then(
         (m) => m.ToolsAndResourcesModule,
       ),
+  },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsModule),
   },
   { path: '**', component: PageNotFoundComponent },
 ];

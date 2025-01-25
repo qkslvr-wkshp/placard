@@ -12,6 +12,7 @@ export class AppComponent {
 
   sections = [
     { title: 'About', link: 'about' },
+    { title: 'Products', link: 'products' },
     { title: 'Tools & Resources', link: 'tools-and-resources' },
   ];
 }
