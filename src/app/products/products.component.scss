@@ -2,6 +2,14 @@ h3 {
   color: var(--quicksilver);
 }
 
+h4 {
+  span {
+    color: color-mix(in srgb, var(--bright-blue) 100%, transparent);
+    font-size: smaller;
+    margin-left: 8px;
+  }
+}
+
 article {
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 8px;
@@ -10,5 +18,15 @@ article {
 
   p {
     color: #666;
+  }
+
+  .divider {
+    width: 1px;
+    height: 1px;
+    background: var(--quicksilver-horizontal-gradient);
+
+    &.half-width {
+      width: 50%;
+    }
   }
 }

@@ -10,5 +10,11 @@ article {
 
   p {
     color: #666;
+
+    a,
+    a:hover,
+    a:visited {
+      color: var(--quicksilver);
+    }
   }
 }

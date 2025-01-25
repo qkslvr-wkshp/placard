@@ -1,5 +1,5 @@
 :host {
-  --bright-blue: oklch(51.01% 0.274 263.83);
+  --bright-blue: oklch(0.7 0.14 231.98);
   --electric-violet: oklch(53.18% 0.28 296.97);
   --french-violet: oklch(47.66% 0.246 305.88);
   --vivid-pink: oklch(69.02% 0.277 332.77);
@@ -17,10 +17,22 @@
 
   --quicksilver-vertical-gradient: linear-gradient(
     180deg,
-    var(--gray-900) 0%,
-    var(--gray-700) 25%,
-    var(--quicksilver) 50%,
-    var(--gray-400) 100%
+    var(--gray-300) 0%,
+    color-mix(in srgb, var(--bright-blue) 25%, transparent) 20%,
+    color-mix(in srgb, var(--quicksilver) 50%, transparent) 25%,
+    color-mix(in srgb, var(--bright-blue) 50%, transparent) 50%,
+    color-mix(in srgb, var(--quicksilver) 50%, transparent) 75%,
+    color-mix(in srgb, var(--bright-blue) 25%, transparent) 80%,
+    var(--gray-300) 100%
+  );
+
+  --quicksilver-horizontal-gradient: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--bright-blue) 25%, transparent) 0%,
+    var(--quicksilver) 25%,
+    var(--bright-blue) 50%,
+    var(--quicksilver) 75%,
+    color-mix(in srgb, var(--bright-blue) 25%, transparent) 100%
   );
 
   --red-to-pink-to-purple-vertical-gradient: linear-gradient(
@@ -140,8 +152,12 @@
 
   .divider {
     width: 1px;
-    background: var(--gray-300);
+    background: var(--quicksilver-vertical-gradient);
     margin-inline: 0.5rem;
+
+    &.half-width {
+      width: 50%;
+    }
   }
 
   .pill-group {
@@ -156,7 +172,7 @@
     display: flex;
     align-items: center;
     --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--quicksilver) 25%, transparent);
+    background: transparent;
     color: var(--gray-900);
     padding-inline: 0.75rem;
     padding-block: 0.375rem;
@@ -173,7 +189,7 @@
   }
 
   .pill.active-link {
-    background: transparent;
+    background: color-mix(in srgb, var(--quicksilver) 25%, transparent);
     color: var(--gray-700);
     font-weight: bold;
   }
